@@ -315,7 +315,7 @@ fi
 install_status="$( jq -r '.installed' "/root/.trojan/config.json" )"
 colorEcho ${INFO} "被墙检测ing"
 
-ping 114.114.114.114 -c 2 -q && curl -s http://tencent.com/ --connect-timeout 60 &> /dev/null
+ping 223.5.5.5 -c 2 -q && curl -s http://tencent.com/ --connect-timeout 60 &> /dev/null
 
 if [[ $? -ne 0 ]]; then
 	colorEcho ${ERROR} "你的ip被墙了，快滚！"
